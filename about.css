@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(Background-IMG.webp);
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    
+}
+
+nav {
+    max-height: 90px;
+    display: flex;
+    align-items: center;
+    z-index: 2; /* Set a higher z-index to position the navigation above the overlay and background image */
+    position: relative; /* Add position: relative; to create a new stacking context */
+    border-bottom: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.7); /* Add a transparent white background for better contrast */
+}
+
+.logo-container {
+    margin-right: 10px;
+}
+
+.logo {
+    max-width: 60px;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+li {
+    /* Optionally, add some styles to the list items */
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+ul li a:hover {
+    color: purple;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  margin: 5px 0;
+}
+
+.dropdown-content li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* Define the custom scrollbar style */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #414141;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d600ba;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: purple;
+  }
+  
+ .GalleryTitle h2{
+    font-size: 40px;
+    margin: 20px;
+ }
+
+
+
+footer{
+    background-color: #414141;
+    width: 100%;
+    height: 30vh;
+    margin-top: 50px;
+   }
+   .copyright p{
+    display: inline-block;
+   }
+   .copyright{
+    text-align: center;  
+   }
+
+   .about{
+    width: 70%;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Add a transparent white background for better contrast */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    margin-top: 20px;
+   }
+   .about-logo{
+    display: inline-block;
+   }
+   .about-logo img{
+    width: 250px;
+    margin: 20px;
+   }
+   .about-info{
+    display: inline-block;
+   }
+   .management-title{
+    margin: 20px;
+   }
+   .theTeam{
+    display: flex;
+    width: 100%;
+   }
+   .member{
+    width: 380px;
+    margin: 0 auto;
+   }
+   .member img{
+    margin: 0 auto;
+   }
+   .info{
+    text-align: center;
+    background-color: black;
+    margin-top: -26px;
+    padding-bottom:5px ;
+   }
+   .info h1{
+    margin-bottom: 1px;
+   }
+   .info p{
+    margin-top: 1px;
+   }
+
+   .socials i{
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .socials i:hover{
+    color: purple;
+  }
+  .fa-brands{
+      font-size: 15px;
+      margin-right: 20px;
+  }

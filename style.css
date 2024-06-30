@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    
+}
+
+nav {
+    max-height: 90px;
+    display: flex;
+    align-items: center;
+    z-index: 2; /* Set a higher z-index to position the navigation above the overlay and background image */
+    position: relative; /* Add position: relative; to create a new stacking context */
+    border-bottom: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.7); /* Add a transparent white background for better contrast */
+}
+
+.logo-container {
+    margin-right: 10px;
+}
+
+.logo {
+    max-width: 60px;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+li {
+    /* Optionally, add some styles to the list items */
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+ul li a:hover {
+    color: purple;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  margin: 5px 0;
+}
+
+.dropdown-content li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+.container {
+    background-image: url(MAIN\ IMAGE.webp);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position:  center -85px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Add a transparent white background for better contrast */
+}
+.welcome-container{
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin-top:40px;
+    margin-left: 40px;
+    max-width:500px;
+    font-size: 40px;
+    display: inline-block;
+}
+.welcome-container h1{
+    margin-bottom: 20px;
+}
+.popup-animation {
+  animation: popUp 1s ease;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.welcome-container p{
+    font-size:20px;
+}
+.typing-animation {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(40) 0.8s forwards;
+}
+/* Define the popup animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Define the typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.social-container{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    border-left: 1px solid white;
+    padding-left: 5px;
+    animation: slideIn 2s ease; /* Apply the animation to the container */
+}
+/* Define the slideIn animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Start position, outside the container on the left */
+  }
+  to {
+    transform: translateX(0); /* End position, original position inside the container */
+  }
+}
+.social-container i{
+  transition: 0.5s;
+  cursor: pointer;
+}
+.social-container i:hover{
+  color: purple;
+}
+.fa-brands{
+    font-size: 30px;
+    margin-right: 20px;
+}
+.tagline-container{
+    max-width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+.tagline-container h2{
+    text-align: center;
+    font-size: 35px;
+    border-bottom: 1px solid white; 
+}
+.wrapper {
+    display: flex;
+    justify-content: center; /* Horizontally center the three containers */
+    align-items: center; /* Vertically center the three containers */
+  }
+  .eventName{
+    margin-right: 2px;
+    margin-left: 5px;
+  }
+.event-container{
+    display: inline-block;
+    width: 300px;
+    height: 60vh;
+    margin: 30px;
+    border-radius: 20px;
+    border: 5px solid blue;
+    text-align: center;
+}
+
+.bigLogo-container{
+    display: inline-block;
+    margin: 60px;
+    width: auto;
+}
+.bigLogo-container img {
+    width: 100%; /* To make sure the image fits within the container */
+    transition: transform 1s ease; /* Add a transition for smooth animation */
+  }
+  
+  @keyframes rotate3D {
+    from {
+      transform: rotateY(0deg); /* Starting rotation (0 degrees) */
+    }
+    to {
+      transform: rotateY(360deg); /* Ending rotation (360 degrees for full 3D rotation) */
+    }
+  }
+  
+  .rotate-3d {
+    animation: rotate3D 5s infinite; /* Apply the 3D rotation animation for 5 seconds infinitely */
+  }
+.results-container{
+    width: 500px;
+    height: 60vh;
+    float: right;
+    margin: 30px;
+    border-radius: 20px;
+    border: 5px solid blue;
+    text-align: center;
+
+}
+.result{
+    background-color: blueviolet ;
+    display: flex; 
+}
+.team1, .score ,.team2{
+    flex: 1;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.team1 h2, .team2 h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.score p{
+    font-size: 25px;
+}
+
+.team1 img, .team1 h2,.team2 img, .team2 h2,  .score p{
+    display: inline-block;
+}
+
+
+
+.imageGallery-container{
+    width: 80%;
+    background: url(Background-IMG.webp);
+    height: 80vh;
+    margin: 0 auto;
+    overflow-x: scroll; /* Enable horizontal scrollbar */
+    border-radius: 20px;
+}
+.wrappers{
+    position: relative;
+    flex-grow: 1;
+    margin: auto;
+    max-width: 1200px;
+    max-height: 1200px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2vmin;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .wrappers img {
+    z-index: 1;
+    cursor: pointer;
+    grid-column: span 2;
+    max-width: 100%;
+    margin-bottom: -52%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: scale(1);
+    transition: all .25s;
+    
+    &:nth-child(7n + 1) {
+      grid-column: 2 / span 2;
+    }
+    
+    &:hover {
+      z-index: 2;
+      transform: scale(2);
+    }
+  }
+  
+
+
+
+
+ /* Define the custom scrollbar style */
+ ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #414141;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d600ba;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: purple;
+  }
+  
+ .GalleryTitle h2{
+    font-size: 40px;
+    margin: 20px;
+ }
+
+ footer{
+  background-color: #414141;
+  width: 100%;
+  height: 30vh;
+  margin-top: 50px;
+ }
+ .copyright p{
+  display: inline-block;
+ }
+ .copyright{
+  text-align: center;
+
+ }
+ 
